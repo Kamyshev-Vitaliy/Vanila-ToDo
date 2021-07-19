@@ -1,0 +1,181 @@
+
+/*
+Общий блок
+*/
+
+.container__todo {
+    max-width: 500px;
+    margin: 50px auto 0;
+}
+
+/*
+Positin
+*/
+.form__container{
+    position: relative;
+    margin-top: 8px;
+}
+
+.form__container .add__btn {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 56px;
+    height: 35px;
+}
+
+.form__container .color__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 80px;
+}
+.color__btn div {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.color__btn div::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ffd48f;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    display: none;
+}
+
+.color__btn {
+    display: flex;
+    justify-content: space-between;
+    width: 126px;
+}
+
+/*
+Input
+ */
+
+.container__todo form input {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    padding: 15px 248px 16px 10px;
+    cursor: pointer;
+    outline: none;
+}
+
+/*
+add__button
+ */
+
+.container__todo form .add__btn {
+    display: block;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    outline: none;
+    border-radius: 4px;
+    border: none;
+    background-color: #259c8f;
+    color: white;
+    text-align: center;
+}
+
+.add__item{
+    padding:0;
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.add__item::before{
+    content: '';
+    position: absolute;
+    background-color: white;
+    width: 1px;
+    height: 43px;
+    top: 0px;
+    left: 42px;
+}
+.add__list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.add__list li + li{
+    margin-top: 1px;
+}
+
+/*#todo__input{*/
+/*    !*margin-top: 7px;*!*/
+/*}*/
+
+.text__todo{
+    display: inline-block;
+}
+
+.violet{
+    background-color: #5e59b4;
+}
+
+.orange{
+    background-color: #f99b07;
+}
+
+.green{
+    background-color: #1c7502;
+}
+
+.red{
+    background-color: #f12a03;
+}
+
+.light-green{
+    background-color: #2fd160;
+}
+
+.blue{
+    background-color: #4d33ff;
+}
+
+.add__item__checkbox{
+    margin: 15px;
+}
+
+.add__item__todo-name{
+    /*border-left: 1px solid #FFF;*/
+    padding-left: 12px;
+    color: white;
+}
+.color-active{
+    position: relative;
+}
+.color-active::after{
+    content: '';
+    padding: 2px;
+    position: absolute;
+    border: 1px solid #ffddb1;
+    top: -3px;
+    left: -3px;
+    height: 100%;
+    width: 100%;
+
+}
+.completed{
+    background-color: #cccccc;
+    text-decoration: line-through white;
+}
